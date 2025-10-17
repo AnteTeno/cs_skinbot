@@ -1,4 +1,6 @@
 import Analyzer
+import streamlit as st
 
 if __name__ == "__main__":
-    Analyzer.analyzeCSGOEmpire()
+    st.write("CSGOEmpire auction analyzer")
+    
