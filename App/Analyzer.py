@@ -1,8 +1,8 @@
-import fetcher
+import Fetcher
 import json
 import pandas
 
-raw_Data = fetcher.fetch_csgoempire()
+raw_Data = Fetcher.fetch_csgoempire()
 
 
 def getDataFrame():
@@ -24,12 +24,8 @@ def getDataFrame():
 def find_deals(df):
     if(df['market_value'] > 200 and df['above_market'] < -200 
        and df['price_is_unreliable'] == 0):
+
         
     
 
     
-        
-
-    
-
-
