@@ -15,7 +15,6 @@ def getDataFrame():
                 , 'purchase_price', 'price_is_unreliable'
                 ,'market_value']]
     
-    #Add 'Is above market value?' to data frame
     df['above_market'] = df['purchase_price'] - df['market_value']
 
     find_deals(df)

@@ -1,15 +1,11 @@
-import sqlite3
 import hashlib
 import Database
 import streamlit as st
 import Authenticator
+import Analyzer
 
 
-  
-
-if __name__ == "__main__":
-    Database.init_db()
-
+def login_page():
     option = st.radio("Select option:", ["Login", "Sign Up"])
 
     if option == "Sign Up":
@@ -33,9 +29,35 @@ if __name__ == "__main__":
         username = st.text_input("Username", key="login_user")
         password = st.text_input("Password", type="password", key="login_pass")
 
+
         if st.button("Login"):
             if Authenticator.verify_user(username, password):
                 st.success(f"Welcome, {username}!")
+                st.session_state.logged_in = True
+                st.session_state.username = username
+                st.rerun()
             else:
                 st.error("Invalid username or password")
+
+def dashboard_page():
+    st.title(f"Welcome, {st.session_state.username}!")
+
+
+def main():
+    Database.init_db()
+    Analyzer.getDataFrame()
+    if "logged_in" not in st.session_state:
+        st.session_state.logged_in = False
+        st.session_state.username = None
+    if st.session_state.logged_in:
+        dashboard_page()
+    else:
+        login_page()
+
+
+if __name__ == "__main__":
+    main()
+    
+
+    
             
