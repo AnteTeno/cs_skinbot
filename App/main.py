@@ -42,10 +42,33 @@ def login_page():
 def dashboard_page():
     st.title(f"Welcome, {st.session_state.username}!")
 
+    if st.button("Refresh Data"):
+        with st.spinner("Fetching latest market data..."):
+            st.session_state.df = Analyzer.get_dataframe()
+
+    if 'df' not in st.session_state:
+        with st.spinner("Fetching initial market data..."):
+            st.session_state.df = Analyzer.get_dataframe()
+
+    df = st.session_state.df
+    
+    if not df.empty:
+        st.subheader("Market Data")
+        st.dataframe(df)
+
+        deals = Analyzer.find_deals(df)
+
+        if not deals.empty:
+            st.subheader("Found Deals")
+            st.dataframe(deals)
+        else:
+            st.info("No outstanding deals found based on current criteria.")
+    else:
+        st.warning("Could not fetch market data. The API might be down or your key is invalid.")
+
 
 def main():
     Database.init_db()
-    Analyzer.getDataFrame()
     if "logged_in" not in st.session_state:
         st.session_state.logged_in = False
         st.session_state.username = None
@@ -57,7 +80,3 @@ def main():
 
 if __name__ == "__main__":
     main()
-    
-
-    
-            

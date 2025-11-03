@@ -1,7 +1,9 @@
 import requests
-from config import CSGOEMPIRE_API_KEY
+from dotenv import load_dotenv
 import json
 from typing import Any
+import os
+load_dotenv() 
 
 def fetch_csgoempire(timeout: int = 10) -> Any:
     """
@@ -9,10 +11,10 @@ def fetch_csgoempire(timeout: int = 10) -> Any:
     Does NOT print. Raises RuntimeError on network/HTTP/parse errors.
     """
     url = "https://csgoempire.com/api/v2/trading/items?per_page=10&page=1&auction=yes&has_stickers=no"
-
+    api_key = os.getenv("CSGO_EMPIRE_API_KEY")
     headers = {
         "accept": "application/json",
-        "Authorization": "Bearer " + CSGOEMPIRE_API_KEY
+        "Authorization": "Bearer " + api_key
     }
 
     try:
