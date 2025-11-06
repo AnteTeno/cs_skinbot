@@ -41,21 +41,28 @@ def get_market_data(authorization: Optional[str] = Header(None)):
         except:
             pass  # Continue without auth if token is invalid
 
-    df = Analyzer.get_dataframe(pages=1)
+    # Fetch 5 pages (500 items total)
+    df = Analyzer.get_dataframe(pages=5)
     if df.empty:
         return {"items": [], "message": "No market data available"}
 
-    # Return all items, sorted by discount percent (best deals first)
-    df_sorted = df.sort_values('discount_percent', ascending=False)
+    # Filter for items with market value over 40 euros (4000 cents)
+    df_filtered = df[df['market_value'] > 4000].copy()
+
+    if df_filtered.empty:
+        return {"items": [], "message": "No items found over 40 euros", "total_items": 0, "deal_count": 0}
+
+    # Return all filtered items, sorted by discount percent (best deals first)
+    df_sorted = df_filtered.sort_values('discount_percent', ascending=False)
     items = df_sorted.to_dict(orient="records")
 
-    # Also try to find deals
-    deals = Analyzer.find_deals(df)
+    # Also try to find deals among filtered items
+    deals = Analyzer.find_deals(df_filtered)
 
     return {
         "items": items,
         "deal_count": len(deals),
-        "total_items": len(df)
+        "total_items": len(df_filtered)
     }
 
 @app.post("/api/signup")

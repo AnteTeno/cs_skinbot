@@ -57420,3 +57420,51 @@ Index: []
 2025-11-06 18:56:04,834 - DEBUG - https://csgoempire.com:443 "GET /api/v2/trading/items?per_page=100&has_stickers=no&page=1 HTTP/11" 200 None
 2025-11-06 18:56:04,958 - DEBUG - Starting new HTTPS connection (1): csgoempire.com:443
 2025-11-06 18:56:05,446 - DEBUG - https://csgoempire.com:443 "GET /api/v2/trading/items?per_page=100&has_stickers=no&page=1 HTTP/11" 200 None
+2025-11-06 19:09:08,387 - DEBUG - loaded lazy attr 'SafeConfigParser': <class 'configparser.ConfigParser'>
+2025-11-06 19:09:08,387 - DEBUG - loaded lazy attr 'NativeStringIO': <class '_io.StringIO'>
+2025-11-06 19:09:08,387 - DEBUG - loaded lazy attr 'BytesIO': <class '_io.BytesIO'>
+2025-11-06 19:09:08,444 - DEBUG - registered 'bcrypt' handler: <class 'passlib.handlers.bcrypt.bcrypt'>
+2025-11-06 19:09:23,004 - DEBUG - detected 'bcrypt' backend, version '3.2.0'
+2025-11-06 19:09:23,006 - DEBUG - 'bcrypt' backend lacks $2$ support, enabling workaround
+2025-11-06 19:09:23,516 - DEBUG - Starting new HTTPS connection (1): csgoempire.com:443
+2025-11-06 19:09:24,183 - DEBUG - https://csgoempire.com:443 "GET /api/v2/trading/items?per_page=100&has_stickers=no&page=1 HTTP/11" 200 None
+2025-11-06 19:09:24,345 - DEBUG - Starting new HTTPS connection (1): csgoempire.com:443
+2025-11-06 19:09:24,863 - DEBUG - https://csgoempire.com:443 "GET /api/v2/trading/items?per_page=100&has_stickers=no&page=1 HTTP/11" 200 None
+2025-11-06 19:11:11,891 - DEBUG - loaded lazy attr 'SafeConfigParser': <class 'configparser.ConfigParser'>
+2025-11-06 19:11:11,891 - DEBUG - loaded lazy attr 'NativeStringIO': <class '_io.StringIO'>
+2025-11-06 19:11:11,891 - DEBUG - loaded lazy attr 'BytesIO': <class '_io.BytesIO'>
+2025-11-06 19:11:11,952 - DEBUG - registered 'bcrypt' handler: <class 'passlib.handlers.bcrypt.bcrypt'>
+2025-11-06 19:11:32,288 - DEBUG - Starting new HTTPS connection (1): csgoempire.com:443
+2025-11-06 19:11:32,738 - DEBUG - https://csgoempire.com:443 "GET /api/v2/trading/items?per_page=100&has_stickers=no&page=1 HTTP/11" 200 None
+2025-11-06 19:11:32,752 - DEBUG - Starting new HTTPS connection (1): csgoempire.com:443
+2025-11-06 19:11:33,236 - DEBUG - https://csgoempire.com:443 "GET /api/v2/trading/items?per_page=100&has_stickers=no&page=2 HTTP/11" 200 None
+2025-11-06 19:11:33,244 - DEBUG - Starting new HTTPS connection (1): csgoempire.com:443
+2025-11-06 19:11:33,692 - DEBUG - https://csgoempire.com:443 "GET /api/v2/trading/items?per_page=100&has_stickers=no&page=3 HTTP/11" 200 None
+2025-11-06 19:11:33,700 - DEBUG - Starting new HTTPS connection (1): csgoempire.com:443
+2025-11-06 19:11:34,215 - DEBUG - https://csgoempire.com:443 "GET /api/v2/trading/items?per_page=100&has_stickers=no&page=4 HTTP/11" 200 None
+2025-11-06 19:11:34,222 - DEBUG - Starting new HTTPS connection (1): csgoempire.com:443
+2025-11-06 19:11:34,704 - DEBUG - https://csgoempire.com:443 "GET /api/v2/trading/items?per_page=100&has_stickers=no&page=5 HTTP/11" 200 None
+2025-11-06 19:11:47,422 - DEBUG - loaded lazy attr 'SafeConfigParser': <class 'configparser.ConfigParser'>
+2025-11-06 19:11:47,422 - DEBUG - loaded lazy attr 'NativeStringIO': <class '_io.StringIO'>
+2025-11-06 19:11:47,422 - DEBUG - loaded lazy attr 'BytesIO': <class '_io.BytesIO'>
+2025-11-06 19:11:47,463 - DEBUG - registered 'bcrypt' handler: <class 'passlib.handlers.bcrypt.bcrypt'>
+2025-11-06 19:11:50,456 - DEBUG - Starting new HTTPS connection (1): csgoempire.com:443
+2025-11-06 19:11:50,945 - DEBUG - https://csgoempire.com:443 "GET /api/v2/trading/items?per_page=100&has_stickers=no&page=1 HTTP/11" 200 None
+2025-11-06 19:11:50,955 - DEBUG - Starting new HTTPS connection (1): csgoempire.com:443
+2025-11-06 19:11:51,434 - DEBUG - https://csgoempire.com:443 "GET /api/v2/trading/items?per_page=100&has_stickers=no&page=2 HTTP/11" 200 None
+2025-11-06 19:11:51,442 - DEBUG - Starting new HTTPS connection (1): csgoempire.com:443
+2025-11-06 19:11:51,875 - DEBUG - https://csgoempire.com:443 "GET /api/v2/trading/items?per_page=100&has_stickers=no&page=3 HTTP/11" 200 None
+2025-11-06 19:11:51,884 - DEBUG - Starting new HTTPS connection (1): csgoempire.com:443
+2025-11-06 19:11:52,458 - DEBUG - https://csgoempire.com:443 "GET /api/v2/trading/items?per_page=100&has_stickers=no&page=4 HTTP/11" 200 None
+2025-11-06 19:11:52,467 - DEBUG - Starting new HTTPS connection (1): csgoempire.com:443
+2025-11-06 19:11:53,072 - DEBUG - https://csgoempire.com:443 "GET /api/v2/trading/items?per_page=100&has_stickers=no&page=5 HTTP/11" 200 None
+2025-11-06 19:11:53,139 - DEBUG - Starting new HTTPS connection (1): csgoempire.com:443
+2025-11-06 19:11:53,686 - DEBUG - https://csgoempire.com:443 "GET /api/v2/trading/items?per_page=100&has_stickers=no&page=1 HTTP/11" 200 None
+2025-11-06 19:11:53,695 - DEBUG - Starting new HTTPS connection (1): csgoempire.com:443
+2025-11-06 19:11:54,198 - DEBUG - https://csgoempire.com:443 "GET /api/v2/trading/items?per_page=100&has_stickers=no&page=2 HTTP/11" 200 None
+2025-11-06 19:11:54,208 - DEBUG - Starting new HTTPS connection (1): csgoempire.com:443
+2025-11-06 19:11:54,746 - DEBUG - https://csgoempire.com:443 "GET /api/v2/trading/items?per_page=100&has_stickers=no&page=3 HTTP/11" 200 None
+2025-11-06 19:11:54,755 - DEBUG - Starting new HTTPS connection (1): csgoempire.com:443
+2025-11-06 19:11:55,189 - DEBUG - https://csgoempire.com:443 "GET /api/v2/trading/items?per_page=100&has_stickers=no&page=4 HTTP/11" 200 None
+2025-11-06 19:11:55,197 - DEBUG - Starting new HTTPS connection (1): csgoempire.com:443
+2025-11-06 19:11:55,837 - DEBUG - https://csgoempire.com:443 "GET /api/v2/trading/items?per_page=100&has_stickers=no&page=5 HTTP/11" 200 None
