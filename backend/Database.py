@@ -1,8 +1,9 @@
 import sqlite3
 import hashlib
+import config
 
 def connect():
-    return sqlite3.connect('cs_skinbot.db')
+    return sqlite3.connect(config.DATABASE_URL)
 
 def init_db():
     conn = connect()
@@ -37,7 +38,7 @@ def insert_item_history(df):
     conn.close()
 
 def insert_user(username, email, password_hash):
-    conn = sqlite3.connect("cs_skinbot.db")
+    conn = connect()
     cursor = conn.cursor()
     
     try:
@@ -45,7 +46,7 @@ def insert_user(username, email, password_hash):
                        (username, email, password_hash))
         conn.commit()
         return True
-    except sqlite3.IntegrityError:
-        return False  
+    except sqlite3.IntegrityError as e:
+        return str(e)
     finally:
         conn.close()
