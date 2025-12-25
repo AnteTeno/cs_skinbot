@@ -1,70 +1,67 @@
-## Project Overview
+# CS Skinbot
 
-CS Skinbot is a Counter-Strike skin trading application that fetches deal data from CSGOEmpire API, analyzes market trends, and identifies profitable trading opportunities. The application consists of a FastAPI backend and a React frontend with user authentication.
+A CS:GO skin trading bot that analyzes market data to identify profitable trading opportunities.
+
+## Features
+
+- **Market Analysis** — Fetches 500+ item listings from CSGOEmpire API and identifies profitable trades
+- **User Authentication** — Secure JWT-based auth with password hashing
+- **Data Storage** — SQLite database storing 1000+ market records for trend analysis
+- **Web Interface** — React dashboard for monitoring deals
+
+## Tech Stack
+
+| Backend | Frontend |
+|---------|----------|
+| Python / FastAPI | React |
+| SQLite | JavaScript |
+| JWT Authentication | CSS |
 
 ## Project Structure
-
 ```
 cs_skinbot/
-├── backend/          # FastAPI backend
-│   ├── main.py       # API routes and application entry point
-│   ├── Analyzer.py   # Market analysis and deal-finding logic
-│   ├── Fetcher.py    # CSGOEmpire API integration
-│   ├── Authenticator.py  # JWT authentication and password hashing
-│   ├── Database.py   # SQLite database operations
-│   └── config.py     # Database configuration
-└── frontend/         # React frontend
+├── backend/
+│   ├── main.py          # API routes
+│   ├── Analyzer.py      # Market analysis logic
+│   ├── Fetcher.py       # CSGOEmpire API integration
+│   ├── Authenticator.py # JWT auth & password hashing
+│   └── Database.py      # SQLite operations
+└── frontend/
     └── src/
-        ├── App.js           # Main routing component
-        └── components/      # React components (Login, Signup, Dashboard)
+        ├── App.js
+        └── components/   # Login, Signup, Dashboard
 ```
 
-## Development Setup
+## Quick Start
 
 ### Backend
-
-**Install dependencies:**
 ```bash
 cd backend
 pip install -r requirements.txt
 ```
 
-**Required environment variables** (create `.env` in backend directory):
-- `CSGO_EMPIRE_API_KEY` - API key for CSGOEmpire
-- `SECRET_KEY` - JWT secret key for authentication
+Create `.env`:
+```
+CSGO_EMPIRE_API_KEY=your_api_key
+SECRET_KEY=your_jwt_secret
+```
 
-**Run the backend:**
+Run:
 ```bash
-cd backend
 uvicorn main:app --reload
 ```
 
-The FastAPI server will start on `http://localhost:8000`. API documentation is available at `http://localhost:8000/docs`.
+API docs: `http://localhost:8000/docs`
 
 ### Frontend
-
-**Install dependencies:**
 ```bash
 cd frontend
 npm install
-```
-
-**Run the frontend:**
-```bash
-cd frontend
 npm start
 ```
 
-The React app will start on `http://localhost:3000`.
+App runs on `http://localhost:3000`
 
-**Run tests:**
-```bash
-cd frontend
-npm test
-```
+## License
 
-**Build for production:**
-```bash
-cd frontend
-npm run build
-```
+MIT
